@@ -22,6 +22,10 @@ if file:
     avg = df[subject].mean()
     st.success(f"Average {subject} Marks: {avg:.2f}")
 
+    st.subheader("Maximum Marks")
+    max_marks = df[subject].max()
+    st.info(f"Maximum {subject} Marks: {max_marks}")
+
     st.subheader("Bar Chart")
     st.bar_chart(df[subject])
 
